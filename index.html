@@ -20,31 +20,31 @@
   </head>
   <body x-data="{ modalOpen: false, videoSrc: '' }" class="bg-white m-0 p-0 font-[aktiv-grotesk]">
     <header class="w-full bg-white px-4 py-3 shadow-sm">
-      <div class="mx-4 lg:mx-10 flex items-center justify-between">
+      <div class="mr-4 lg:mr-10 lg:ml-6 flex items-center justify-between">
         
         <!-- Logo -->
         <div class="flex items-center gap-2">
-          <img src="https://www.schoolandvacation.it/wp-content/uploads/2024/07/school-and-vacation.svg" alt="Logo" class="h-6 lg:h-16" />
+          <img src="https://www.schoolandvacation.it/wp-content/uploads/2024/07/school-and-vacation.svg" alt="Logo" class="h-10 lg:h-16" />
         </div>
     
         <!-- Info -->
         <div class="flex items-center gap-6 text-sm text-gray-600">
     
           <!-- MILANO -->
-          <div class="flex items-center gap-1">
-            <i class="fas fa-map-marker-alt text-gray-400"></i>
-            <div class="text-[12px] sm:text-[14px]">
-              <span class="font-bold">MILANO</span><br class="hidden sm:block" />
-              <span class="uppercase text-[11px] sm:text-[13px] text-gray-500 hidden sm:inline">M1 DUOMO</span>
+          <div class="flex items-center gap-3">
+            <i class="fas fa-map-marker-alt text-gray-400 fa-lg"></i>
+            <div class="text-[13px] lg:text-[15px] flex flex-col leading-[14px] lg:leading-[18px] ">
+              <div class="block font-medium mb-0 -mb-3">MILANO</div>
+              <div class="block font-medium uppercase text-[13px] lg:text-[15px] text-gray-500 mt-0 -mt-4">M1 DUOMO</div>
             </div>
           </div>
     
           <!-- TELEFONO -->
-          <div class="flex items-center gap-1">
-            <i class="fas fa-phone text-[#1B4078]"></i>
-            <div class="text-[12px] sm:text-[14px]">
-              <span class="font-bold hidden sm:inline">02 433533</span><br class="hidden sm:block" />
-              <span class="uppercase text-[11px] text-gray-500 hidden sm:inline">LUN VEN 10-13 E 14-18</span>
+          <div class="flex items-center gap-3">
+            <i class="fas fa-phone text-[#1B4078] fa-lg"></i>
+            <div class="text-[13px] lg:text-[15px] flex flex-col leading-[14px] lg:leading-[18px]">
+              <div class="block font-medium hidden sm:block  lg:text-[16px]">02 433533</div>
+              <div class="uppercase font-medium text-[13px] text-gray-500 hidden sm:block text-gray-400">LUN VEN 10-13 E 14-18</div>
             </div>
           </div>
     
@@ -56,7 +56,7 @@
 
           <!-- Destra -->
           <div class="lg:w-7/12 w-full">
-            <div class="w-full  aspect-[16/9]">
+            <div class="w-full  aspect-[4/3]">
               <img
                 src="ireland.jpg"
                 alt="Studenti in Irlanda"
@@ -99,7 +99,7 @@
             <p class="font-medium mt-2 tracking-wide">Sede storica a Milano</p>
           </div>
           <div class="flex-1 border-b-2 border-[#3B66A7] text-center p-2 lg:px-8">
-            <i class="fas fa-tv text-blue-900 text-2xl mb-2"></i>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Logo_of_RAI_%282016%29.svg/1024px-Logo_of_RAI_%282016%29.svg.png" class="h-9 mx-auto text-center">
             <p class="font-medium mt-2 tracking-wide">Casi studio citati in RAI</p>
           </div>
         </div>
@@ -114,7 +114,7 @@
       <!-- Carousel -->
       <div class="flex space-x-4 overflow-x-auto pb-4">
         <!-- Anteprima 1 -->
-        <div class="ml-4 lg:ml-10 flex-shrink-0 w-48 lg:w-1/6 cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/dQw4w9WgXcQ'">
+        <div class="ml-4 lg:ml-10  flex-shrink-0 w-48 lg:w-1/6 cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/dQw4w9WgXcQ'">
           <div class="relative">
             <img src="https://placehold.co/1080x1920" alt="Reel 1" class="w-full h-auto rounded-lg">
             <div class="absolute inset-0 flex items-center justify-center">
@@ -213,8 +213,8 @@ E quando ero lì, sapevo a chi scrivere se avevo un dubbio. Questo ha fatto tutt
 
 
       <!--destro-->
-      <div class="lg:w-7/12 px-4 lg:px-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="lg:w-7/12 px-4 lg:px-10 ">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 ">
           <!-- Box 1 -->
           <div class="flex items-start gap-4 border-r-2 md:border-r-0 md:border-b-2 border-[#A7C7E7] lg:pb-6 pr-4">
             <i class="fas fa-graduation-cap text-2xl text-[#333]"></i>
@@ -296,7 +296,7 @@ E quando ero lì, sapevo a chi scrivere se avevo un dubbio. Questo ha fatto tutt
     </p>
   
     <!-- Griglia responsive -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
       <!-- Reel 1 -->
       <div class="cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/Bey4XXJAqS8'">
         <div class="relative">
@@ -353,7 +353,7 @@ E quando ero lì, sapevo a chi scrivere se avevo un dubbio. Questo ha fatto tutt
 
 
 
-  <section class="px-4 py-12 bg-white">
+  <section class="py-12 bg-white">
     <div class="px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
       <!-- Colonna 1 -->
       <div>
@@ -364,18 +364,18 @@ E quando ero lì, sapevo a chi scrivere se avevo un dubbio. Questo ha fatto tutt
         </h2>
         <div class="w-10 h-[3px] bg-red-600 my-4"></div>
   
-        <p class="text-[#25354D] text-[15px] leading-relaxed">
+        <p class="text-[#25354D]  text-[16px] lg:text-[21px] leading-relaxed">
           School and Vacation è stata scelta da aziende di rilievo come per esempio <strong>Enel, Eni, Banca d’Italia, Autostrade, Roche, AON, RAI</strong>, etc per la gestione del welfare aziendale, dimostrando la fiducia riposta nell’azienda da parte di importanti realtà corporate
         </p>
   
         <div class="flex gap-4 flex-wrap items-center mt-4">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/British_Council_logo.svg/2560px-British_Council_logo.svg.png" class="h-6" alt="British Council" />
-          <img src="https://www.englishuk.com/uploads/assets/logos/accreditations/logo_mei.png" class="h-6" alt="MEI" />
-          <img src="https://www.englishus.com/img/logo-enus.png" class="h-6" alt="English US" />
-          <img src="https://www.eaquals.org/wp-content/themes/eaquals/images/logo.png" class="h-6" alt="Eaquals" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/British_Council_logo.svg" class="h-6" alt="British Council" />
+          <img src="https://www.pro-manchester.co.uk/wp-content/uploads/2021/11/MEI-Logo-720x504.jpg" class="h-8" alt="MEI" />
+          <img src="https://assets.noviams.com/novi-file-uploads/eusa/structure/main_logo-2.png" class="h-8" alt="English US" />
+          <img src="https://www.eaquals.org/wp-content/themes/eaquals/assets/img/eaquals-logo-blue@2x.png" class="h-8" alt="Eaquals" />
         </div>
   
-        <p class="mt-4 text-[#25354D] text-[15px] leading-relaxed">
+        <p class="mt-4 text-[#25354D]  text-[16px] lg:text-[21px] leading-relaxed">
           L'azienda è membro FIAVET e certificata secondo la normativa <strong>UNI EN 14804</strong> per i viaggi studio. Inoltre, i partner all’estero e le fondazioni con cui lavora sono Partner Agent di Quality English e riconosciuti da enti certificatori internazionali
         </p>
       </div>
@@ -384,7 +384,7 @@ E quando ero lì, sapevo a chi scrivere se avevo un dubbio. Questo ha fatto tutt
       <div class="bg-[#1B4078] text-white px-4 lg:px-10 py-8 lg:py-10 ">
         <h3 class="text-[21px] lg:text-3xl font-[aktiv-grotesk] font-[900] text-white lg:leading-[40px] text-center uppercase ">Richiedi ora <br>una consulenza</h3>
   
-        <form action="/invia-consulenza" method="POST" class="space-y-4 my-8">
+        <form action="/invia-consulenza" method="POST" class="space-y-4 my-8  text-[16px] lg:text-[21px]">
           <div>
             <label for="nome">Nominativo</label>
             <input id="nome" name="nome" type="text" required placeholder="Nome e cognome" class="w-full p-3 rounded-md text-black" />
@@ -425,15 +425,15 @@ E quando ero lì, sapevo a chi scrivere se avevo un dubbio. Questo ha fatto tutt
           CONFRONTO A VOCE?
         </h3>
         <div class="w-10 h-[3px] bg-red-600 my-4"></div>
-        <p class="text-[#25354D] text-[15px] mt-4 leading-relaxed">
+        <p class="text-[#25354D]  text-[16px] lg:text-[21px] mt-4 leading-relaxed">
           Un team di professionisti esperti nei viaggi studio vi aspetta dal lunedì al venerdì dalle 10:00 alle 13:00 e dalle 14:00 alle 18:00.
         </p>
   
-        <p class="mt-4 text-[#25354D] font-semibold">Chiamaci</p>
-        <p class="text-[#25354D]">Tel +39 02 433533 ufficio<br />
+        <p class="mt-4  text-[16px] lg:text-[21px text-[#25354D] font-semibold">Chiamaci</p>
+        <p class="text-[#25354D]  text-[16px] lg:text-[21px]">Tel +39 02 433533 ufficio<br />
         Cell 3755271312 Chiamate e Whatsapp</p>
   
-        <img src="https://schoolandvacation.it/wp-content/uploads/2022/03/logo-schoolandvacation.png" alt="School and Vacation" class="mt-6 h-8">
+        <img src="https://www.schoolandvacation.it/wp-content/uploads/2024/07/school-and-vacation.svg" alt="School and Vacation" class="mt-6 h-8 lg:h-16">
       </div>
     </div>
   </section>
