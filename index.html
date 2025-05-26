@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anno in Irlanda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://use.typekit.net/cpi1jko.css");
+
+    </style>
+    
+    <link rel="stylesheet" href="https://use.typekit.net/cpi1jko.css">
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body x-data="{ modalOpen: false, videoSrc: '' }" class="bg-white m-0 p-0 font-[aktiv-grotesk]">
+    <header class="w-full bg-white px-4 py-3 shadow-sm">
+      <div class="mx-4 lg:mx-10 flex items-center justify-between">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img src="https://www.schoolandvacation.it/wp-content/uploads/2024/07/school-and-vacation.svg" alt="Logo" class="h-6 lg:h-16" />
+        </div>
+    
+        <!-- Info -->
+        <div class="flex items-center gap-6 text-sm text-gray-600">
+    
+          <!-- MILANO -->
+          <div class="flex items-center gap-1">
+            <i class="fas fa-map-marker-alt text-gray-400"></i>
+            <div class="text-[12px] sm:text-[14px]">
+              <span class="font-bold">MILANO</span><br class="hidden sm:block" />
+              <span class="uppercase text-[11px] sm:text-[13px] text-gray-500 hidden sm:inline">M1 DUOMO</span>
+            </div>
+          </div>
+    
+          <!-- TELEFONO -->
+          <div class="flex items-center gap-1">
+            <i class="fas fa-phone text-[#1B4078]"></i>
+            <div class="text-[12px] sm:text-[14px]">
+              <span class="font-bold hidden sm:inline">02 433533</span><br class="hidden sm:block" />
+              <span class="uppercase text-[11px] text-gray-500 hidden sm:inline">LUN VEN 10-13 E 14-18</span>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </header>
+    <div class="flex flex-col lg:flex-row-reverse">
+
+
+          <!-- Destra -->
+          <div class="lg:w-7/12 w-full">
+            <div class="w-full  aspect-[16/9]">
+              <img
+                src="ireland.jpg"
+                alt="Studenti in Irlanda"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+
+      <!-- Sinistra -->
+      <div class="flex flex-col justify-between px-4 lg:px-10 lg:w-5/12">
+        <div class="pt-4 lg:pt-10">
+          <h1 class="text-[23px] lg:text-4xl font-[aktiv-grotesk] font-[900] text-[#25354D] lg:leading-[50px] text-left">
+            
+            IL TUO ANNO SCOLASTICO<br />
+            O SEMESTRE IN <span class="text-green-600">IRLANDA</span><br />
+            INIZIA DA QUI.
+          </h1>
+          <p class="mt-4 text-gray-700 text-left text-[16px] lg:text-[21px] lg:mr-20">
+            Corso preparatorio, supporto dedicato e clienti soddisfatti da oltre 40 anni.
+          </p>
+          <div class="text-center">
+          <button class="mt-6  font-semibold bg-[#1B4078] text-white px-6  pt-4 pb-3 lg:px-12 tracking-wide lg:pt-5 lg:p-4 rounded-full font-semibold uppercase">
+            Chiedi una Consulenza
+          </button>
+          <p class="text-sm text-gray-500 mt-2 text-center">
+            Fino a 2.990€ di vantaggi fino al 31 agosto
+          </p>
+        </div>
+        </div>
+
+        <!-- Box Icone: sempre affiancati -->
+        <div class="mt-10 flex gap-4 text-[13px] lg:text-[17px]">
+          <div class="flex-1 border-b-2 border-[#3B66A7] text-center p-2 lg:px-8 ">
+            <i class="fas fa-star text-blue-900 text-2xl mb-2"></i>
+            <p class="font-medium mt-2 tracking-wide">98% famiglie soddisfatte</p>
+          </div>
+          <div class="flex-1 border-b-2 border-[#3B66A7] text-center p-2 lg:px-8">
+            <i class="fas fa-building text-blue-900 text-2xl mb-2"></i>
+            <p class="font-medium mt-2 tracking-wide">Sede storica a Milano</p>
+          </div>
+          <div class="flex-1 border-b-2 border-[#3B66A7] text-center p-2 lg:px-8">
+            <i class="fas fa-tv text-blue-900 text-2xl mb-2"></i>
+            <p class="font-medium mt-2 tracking-wide">Casi studio citati in RAI</p>
+          </div>
+        </div>
+      </div>
+
+  
+    </div>
+
+    <section  class="py-8 px-0 ">
+   
+  
+      <!-- Carousel -->
+      <div class="flex space-x-4 overflow-x-auto pb-4">
+        <!-- Anteprima 1 -->
+        <div class="ml-4 lg:ml-10 flex-shrink-0 w-48 lg:w-1/6 cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/dQw4w9WgXcQ'">
+          <div class="relative">
+            <img src="https://placehold.co/1080x1920" alt="Reel 1" class="w-full h-auto rounded-lg">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <svg class="w-12 h-12 text-white bg-black bg-opacity-50 rounded-full p-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+         
+        </div>
+    
+        <!-- Anteprima 2 -->
+        <div class="flex-shrink-0 w-48  lg:w-1/6 cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/3GwjfUFyY6M'">
+          <div class="relative">
+            <img src="https://placehold.co/1080x1920" alt="Reel 2" class="w-full h-auto rounded-lg">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <svg class="w-12 h-12 text-white bg-black bg-opacity-50 rounded-full p-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+         
+        </div>
+  
+        <div class="flex-shrink-0 w-48  lg:w-1/6 cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/3GwjfUFyY6M'">
+          <div class="relative">
+            <img src="https://placehold.co/1080x1920" alt="Reel 2" class="w-full h-auto rounded-lg">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <svg class="w-12 h-12 text-white bg-black bg-opacity-50 rounded-full p-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+          
+        </div>
+  
+        <div class="flex-shrink-0 w-48  lg:w-1/6 cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/3GwjfUFyY6M'">
+          <div class="relative">
+            <img src="https://placehold.co/1080x1920" alt="Reel 2" class="w-full h-auto rounded-lg">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <svg class="w-12 h-12 text-white bg-black bg-opacity-50 rounded-full p-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+         
+        </div>
+  
+        <div class="flex-shrink-0 w-48  lg:w-1/6 cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/3GwjfUFyY6M'">
+          <div class="relative">
+            <img src="https://placehold.co/1080x1920" alt="Reel 2" class="w-full h-auto rounded-lg">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <svg class="w-12 h-12 text-white bg-black bg-opacity-50 rounded-full p-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+        
+        </div>
+    
+        <!-- Aggiungi altre anteprime se necessario -->
+      </div>
+    
+      <!-- Modale Video -->
+      <div x-show="modalOpen" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" x-transition>
+        <div class="bg-white rounded-lg overflow-hidden w-11/12 md:w-3/4 lg:w-1/2" @click.away="modalOpen = false">
+          <div class="relative pb-[56.25%]">
+            <iframe :src="videoSrc" class="absolute top-0 left-0 w-full h-full" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <button @click="modalOpen = false" class="absolute top-2 right-2 text-white text-2xl">&times;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-10">
+    <div class="flex flex-col lg:flex-row">
+
+      <div class="lg:w-5/12 px-4 lg:px-10">
+        <h2 class="text-[21px] lg:text-3xl font-[aktiv-grotesk] font-[900] text-[#25354D] lg:leading-[50px] text-left">
+            
+          PARTIRE PRONTI.<br>E NON RESTARE MAI SOLI
+        </h2>
+        <p class="mt-4 text-gray-700 text-left text-[16px] lg:text-[21px] lg:mr-20 mb-10">
+          “Prima di partire sapevo già com’era la scuola, cosa aspettarmi dalla famiglia e come funzionava la giornata.
+E quando ero lì, sapevo a chi scrivere se avevo un dubbio. Questo ha fatto tutta la differenza”
+        </p>
+        <div class="text-center">
+          <button class="mt-6  font-semibold bg-[#1B4078] text-white px-6  pt-4 pb-3 lg:px-12 tracking-wide lg:pt-5 lg:p-4 rounded-full font-semibold uppercase">
+            Chiedi una Consulenza
+          </button>
+          <p class="text-sm text-gray-500 mt-2 text-center">
+            Fino a 2.990€ di vantaggi fino al 31 agosto
+          </p>
+        </div>
+      </div>
+
+
+      <!--destro-->
+      <div class="lg:w-7/12 px-4 lg:px-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Box 1 -->
+          <div class="flex items-start gap-4 border-r-2 md:border-r-0 md:border-b-2 border-[#A7C7E7] lg:pb-6 pr-4">
+            <i class="fas fa-graduation-cap text-2xl text-[#333]"></i>
+            <div class="w-full">
+              <p class="font-semibold text-[16px] lg:text-[21px] text-[#2c3e50]">Corso Ready2Go incluso</p>
+              <p class="text-[14px] lg:text-[19px] text-gray-600 mt-1">
+                Piccole pillole che ti preparano prima di partire: scuola, lingua, cultura, vita quotidiana.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Box 2 -->
+          <div class="flex items-start gap-4 border-r-2 md:border-r-0 md:border-b-2 border-[#A7C7E7]  lg:pb-6 pr-4">
+            <i class="fas fa-user-friends text-2xl text-[#333]"></i>
+            <div class="w-full">
+              <p class="font-semibold text-[16px] lg:text-[21px] text-[#2c3e50]">Assistenza vera, ufficio dedicato</p>
+              <p class="text-[14px] lg:text-[19px] text-gray-600 mt-1">
+                Ufficio dedicato, persone reali. Siamo lì anche quando sei lontano.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Box 3 -->
+          <div class="flex items-start gap-4 border-r-2 md:border-r-0 md:border-b-2 border-[#A7C7E7]  lg:pb-6 pr-4">
+            <i class="fas fa-home text-2xl text-[#333]"></i>
+            <div class="w-full">
+              <p class="font-semibold text-[16px] lg:text-[21px] text-[#2c3e50]">Famiglie ospitanti selezionate</p>
+              <p class="text-[14px] lg:text-[19px] text-gray-600 mt-1">
+                Scelte per affinità e affidabilità e apprezzate in oltre il 90% dei nostri questionari.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Box 4 -->
+          <div class="flex items-start gap-4 border-r-2 md:border-r-0 md:border-b-2 border-[#A7C7E7]  lg:pb-6 pr-4">
+            <i class="fas fa-phone text-2xl text-[#333]"></i>
+            <div class="w-full">
+              <p class="font-semibold text-[16px] lg:text-[21px] text-[#2c3e50]">Contatti sempre attivi</p>
+              <p class="text-[14px] lg:text-[19px] text-gray-600 mt-1">
+                Per te e per la tua famiglia, 24/7.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Box 5 -->
+          <div class="flex items-start gap-4 border-r-2 md:border-r-0 md:border-b-2 border-[#94D9E6]  lg:pb-6 pr-4">
+            <i class="fas fa-star text-2xl text-[#333]"></i>
+            <div class="w-full">
+              <p class="font-semibold text-[16px] lg:text-[21px] text-[#2c3e50]">Clienti soddisfatti ogni anno.</p>
+              <p class="text-[14px] lg:text-[19px] text-gray-600 mt-1">
+                Non lo diciamo noi, lo dicono loro: guarda le recensioni.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Box 6 -->
+          <div class="flex items-start gap-4 border-r-2 md:border-r-0 md:border-b-2 border-[#94D9E6]  lg:pb-6 pr-4">
+            <i class="fas fa-star text-2xl text-[#333]"></i>
+            <div class="w-full">
+              <p class="font-semibold text-[16px] lg:text-[21px] text-[#2c3e50]">Clienti soddisfatti ogni anno.</p>
+              <p class="text-[14px] lg:text-[19px] text-gray-600 mt-1">
+                Non lo diciamo noi, lo dicono loro: guarda le recensioni.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-8 px-4 lg:px-10 bg-gray-50">
+    <h2 class="text-[21px] mb-0 lg:text-3xl font-[aktiv-grotesk] font-[900] text-[#25354D] text-center uppercase">
+            
+     Come sarà la tua esperienza
+    </h2>
+    <p class="mt-0 text-gray-700 text-center text-[16px] lg:text-[21px]  mb-10">
+     Raccontata da chi l'ha fatta prima di te
+    </p>
+  
+    <!-- Griglia responsive -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <!-- Reel 1 -->
+      <div class="cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/Bey4XXJAqS8'">
+        <div class="relative">
+          <img src="https://placehold.co/1080x1920" alt="Reel A" class="w-full h-auto rounded-lg">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-10 h-10 text-white bg-black bg-opacity-50 rounded-full p-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+        <p class="mt-2 text-center text-sm font-medium">Campus</p>
+      </div>
+  
+      <!-- Reel 2 -->
+      <div class="cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/Bey4XXJAqS8'">
+        <div class="relative">
+          <img src="https://placehold.co/1080x1920" alt="Reel B" class="w-full h-auto rounded-lg">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-10 h-10 text-white bg-black bg-opacity-50 rounded-full p-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+        <p class="mt-2 text-center text-sm font-medium">Camera</p>
+      </div>
+  
+      <!-- Reel 3 -->
+      <div class="cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/Bey4XXJAqS8'">
+        <div class="relative">
+          <img src="https://placehold.co/1080x1920" alt="Reel C" class="w-full h-auto rounded-lg">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-10 h-10 text-white bg-black bg-opacity-50 rounded-full p-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+        <p class="mt-2 text-center text-sm font-medium">Lezioni</p>
+      </div>
+  
+      <!-- Reel 4 -->
+      <div class="cursor-pointer" @click="modalOpen = true; videoSrc = 'https://www.youtube.com/embed/Bey4XXJAqS8'">
+        <div class="relative">
+          <img src="https://placehold.co/1080x1920" alt="Reel D" class="w-full h-auto rounded-lg">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-10 h-10 text-white bg-black bg-opacity-50 rounded-full p-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+        <p class="mt-2 text-center text-sm font-medium">Attività</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="px-4 py-12 bg-white">
+    <div class="px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Colonna 1 -->
+      <div>
+        <h2 class="text-[21px] lg:text-3xl font-[aktiv-grotesk] font-[900] text-[#25354D] lg:leading-[40px] text-left">
+          UN PUNTO DI<br />
+          RIFERIMENTO DA OLTRE<br />
+          40 ANNI A MILANO
+        </h2>
+        <div class="w-10 h-[3px] bg-red-600 my-4"></div>
+  
+        <p class="text-[#25354D] text-[15px] leading-relaxed">
+          School and Vacation è stata scelta da aziende di rilievo come per esempio <strong>Enel, Eni, Banca d’Italia, Autostrade, Roche, AON, RAI</strong>, etc per la gestione del welfare aziendale, dimostrando la fiducia riposta nell’azienda da parte di importanti realtà corporate
+        </p>
+  
+        <div class="flex gap-4 flex-wrap items-center mt-4">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/British_Council_logo.svg/2560px-British_Council_logo.svg.png" class="h-6" alt="British Council" />
+          <img src="https://www.englishuk.com/uploads/assets/logos/accreditations/logo_mei.png" class="h-6" alt="MEI" />
+          <img src="https://www.englishus.com/img/logo-enus.png" class="h-6" alt="English US" />
+          <img src="https://www.eaquals.org/wp-content/themes/eaquals/images/logo.png" class="h-6" alt="Eaquals" />
+        </div>
+  
+        <p class="mt-4 text-[#25354D] text-[15px] leading-relaxed">
+          L'azienda è membro FIAVET e certificata secondo la normativa <strong>UNI EN 14804</strong> per i viaggi studio. Inoltre, i partner all’estero e le fondazioni con cui lavora sono Partner Agent di Quality English e riconosciuti da enti certificatori internazionali
+        </p>
+      </div>
+  
+      <!-- Colonna 2: FORM -->
+      <div class="bg-[#1B4078] text-white px-4 lg:px-10 py-8 lg:py-10 ">
+        <h3 class="text-[21px] lg:text-3xl font-[aktiv-grotesk] font-[900] text-white lg:leading-[40px] text-center uppercase ">Richiedi ora <br>una consulenza</h3>
+  
+        <form action="/invia-consulenza" method="POST" class="space-y-4 my-8">
+          <div>
+            <label for="nome">Nominativo</label>
+            <input id="nome" name="nome" type="text" required placeholder="Nome e cognome" class="w-full p-3 rounded-md text-black" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="una mail valida" class="w-full p-3 rounded-md text-black" />
+            <p class="text-xs text-white mt-1">Ti confermeremo qui la ricezione richiesta</p>
+          </div>
+          <div>
+            <label for="telefono">Telefono</label>
+            <input id="telefono" name="telefono" type="tel" required placeholder="Telefono" class="w-full p-3 rounded-md text-black" />
+            <p class="text-xs text-white mt-1">Ti chiameremo per fissare la consulenza</p>
+          </div>
+        
+          <div class="flex items-start gap-2">
+            <input id="privacy" name="privacy" type="checkbox" required />
+            <label for="privacy" class="text-sm">Accetto il trattamento dati secondo il GDPR e la privacy policy</label>
+          </div>
+          
+          <div class="flex items-start gap-2">
+            <input id="marketing" name="marketing" type="checkbox" />
+            <label for="marketing" class="text-sm">Autorizzo l’invio del catalogo e di materiale informativo</label>
+          </div>
+        
+          <div>
+            <button type="submit" class="bg-[#4CD964] text-white font-semibold px-6 py-3 rounded-full mt-2 w-full uppercase">
+              Invia richiesta
+            </button>
+          </div>
+        </form>
+      </div>
+  
+      <!-- Colonna 3 -->
+      <div>
+        <h3 class="text-[21px] lg:text-3xl font-[aktiv-grotesk] font-[900] text-[#25354D] lg:leading-[40px] text-left">
+          PREFERISCI UN<br />
+          CONFRONTO A VOCE?
+        </h3>
+        <div class="w-10 h-[3px] bg-red-600 my-4"></div>
+        <p class="text-[#25354D] text-[15px] mt-4 leading-relaxed">
+          Un team di professionisti esperti nei viaggi studio vi aspetta dal lunedì al venerdì dalle 10:00 alle 13:00 e dalle 14:00 alle 18:00.
+        </p>
+  
+        <p class="mt-4 text-[#25354D] font-semibold">Chiamaci</p>
+        <p class="text-[#25354D]">Tel +39 02 433533 ufficio<br />
+        Cell 3755271312 Chiamate e Whatsapp</p>
+  
+        <img src="https://schoolandvacation.it/wp-content/uploads/2022/03/logo-schoolandvacation.png" alt="School and Vacation" class="mt-6 h-8">
+      </div>
+    </div>
+  </section>
+
+  
+  </body>
+</html>
